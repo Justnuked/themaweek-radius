@@ -59,8 +59,12 @@ namespace TextAdventureCS
             {
                 if( input == null || input == "N" )
                 {
+                    do 
+                    { 
                     Console.WriteLine("Please enter your name and press enter:");
                     name = Console.ReadLine();
+                    }
+                    while (name == "");
                 }
 
                 Console.WriteLine("Your name is {0}",name);
@@ -87,18 +91,19 @@ namespace TextAdventureCS
         static void Welcome(ref Player player)
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the world of Flightwood");
-            Console.WriteLine("You just woke up from a very long sleep.");
-            Console.WriteLine("You can't really remember anything but your name.");
-            Console.WriteLine("Which by the way is {0}", player.GetName());
-            
-            // Added newline to improve readability.
+            Console.WriteLine("Welcome to the world of Valenwood");
+            Console.WriteLine("You are a graverobber named {0}.", player.GetName());
+            Console.WriteLine("While staying in an Inn, you overheard a story about the grave of an old ");
+            Console.WriteLine("Mountain Dwarf King, said to be riddled with gold and other treasures.");
+            Console.WriteLine("You decide to go and search for his grave, located deep within the tomb");
+            Console.WriteLine("of Dunbarrow.");
+
+            // Added new line to improve readability.
             Console.WriteLine();
 
             player.ShowInventory();
-            Console.WriteLine("You look around you and realise that you are in a forest.");
-            Console.WriteLine("In the distance you hear the howl of an animal.");
-            Console.WriteLine("You slowly come to your senses and choose to go.");
+            Console.WriteLine("You exit the Inn, located in the town of (Skyrim)");
+            Console.WriteLine("After asking around a little, you decide to start going.");
             Console.WriteLine("Press a key to continue..");
             Console.ReadKey();
         }
@@ -168,7 +173,6 @@ namespace TextAdventureCS
             // Refactored by Michiel and Alex
             do
             {
-                Console.ReadKey();
                 Console.Clear();
                 map.GetLocation().Description();
                 choice = ShowMenu(map, ref menuItems);
@@ -184,10 +188,23 @@ namespace TextAdventureCS
                     {
                         case ACTION_INV:
                             ShowInv(ref player);
+                            Console.ReadKey();
                         break;
 
                         case ACTION_SEARCH:
-                        
+                            Console.Clear();
+
+                            Dictionary<string, Objects> list = map.GetLocation().GetItems();
+                            Objects[] obj = list.Values.ToArray();
+                            for (int i = 0; i < obj.Count(); i++)
+                            {
+                                if (obj[i].GetAcquirable())
+                                {
+                                    Console.WriteLine("{0}", obj[i].GetName());
+                                    player.PickupItem(obj[i]);
+                                }
+                                Console.ReadKey();
+                            }
                         break;
 
                         case ACTION_FIGHT:

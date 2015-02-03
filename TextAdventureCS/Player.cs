@@ -50,7 +50,7 @@ namespace TextAdventureCS
                 Console.WriteLine("These are:");
                 foreach (var item in inventory)
                 {
-                    Console.WriteLine(item.Value);
+                    Console.WriteLine(item.Key);
                 }
             }
         }
