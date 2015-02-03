@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Diamond(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Diamond";
+            acquirable = true;
         }
 
         override protected void Description()

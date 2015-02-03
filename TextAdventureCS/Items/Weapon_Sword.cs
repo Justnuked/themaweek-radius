@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Sword(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Sword";
+            acquirable = true;
         }
 
         override protected void Description()

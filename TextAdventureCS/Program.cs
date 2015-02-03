@@ -167,7 +167,9 @@ namespace TextAdventureCS
 
             // Refactored by Michiel and Alex
             do
-            {                
+            {
+                Console.ReadKey();
+                Console.Clear();
                 map.GetLocation().Description();
                 choice = ShowMenu(map, ref menuItems);
 
@@ -185,7 +187,7 @@ namespace TextAdventureCS
                         break;
 
                         case ACTION_SEARCH:
-                            // Add code to perform an item pickup
+                        
                         break;
 
                         case ACTION_FIGHT:
@@ -207,7 +209,6 @@ namespace TextAdventureCS
                         Console.WriteLine("You have been healed!");                    
                         break;
                     }
-                    
                 }
             } 
             // When the choice is equal to the total item it means exit has been chosen.

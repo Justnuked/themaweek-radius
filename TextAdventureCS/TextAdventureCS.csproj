@@ -44,6 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
+    <Compile Include="Items\Armour_Iron.cs" />
+    <Compile Include="Items\Armour_Leather.cs" />
+    <Compile Include="Items\Armour_Steel.cs" />
+    <Compile Include="Items\Health Potion_Strong.cs" />
+    <Compile Include="Items\Health Potion_Weak.cs" />
+    <Compile Include="Items\Item_Diamond.cs" />
+    <Compile Include="Items\Item_Key.cs" />
+    <Compile Include="Items\Item_Rope.cs" />
+    <Compile Include="Items\Weapon_Axe.cs" />
+    <Compile Include="Items\Weapon_Dagger.cs" />
+    <Compile Include="Items\Weapon_Sword.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Locations\Castle_Locations\Castle.cs" />
     <Compile Include="Locations\Castle_Locations\CastleArmory.cs" />
@@ -65,7 +76,6 @@
     <Compile Include="Locations\Town.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Objects.cs" />
-    <Compile Include="Items\Diamond.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

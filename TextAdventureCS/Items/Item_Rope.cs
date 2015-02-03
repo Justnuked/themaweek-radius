@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Rope(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Key";
+            acquirable = true;
         }
 
         override protected void Description()

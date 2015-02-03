@@ -38,6 +38,7 @@ namespace TextAdventureCS
         {
             // Add an if-statement here when you want to have a maximum number of items
             inventory.Add(obj.GetName(), obj);
+            Console.WriteLine("Picked up a(n) {0}", obj.GetName());
             obj.SetIsAcquirable(false);
         }
 

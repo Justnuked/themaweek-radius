@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Strong_Health_Potion(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Strong Health Potion";
+            acquirable = true;
         }
 
         override protected void Description()

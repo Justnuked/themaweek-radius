@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Armour_Steel(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Steel Chestplate";
+            acquirable = true;
         }
 
         override protected void Description()

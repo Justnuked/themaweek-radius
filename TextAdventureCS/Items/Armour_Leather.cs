@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Armour_Leather(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Leather Chestpiece";
+            acquirable = true;
         }
 
         override protected void Description()
