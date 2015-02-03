@@ -9,12 +9,16 @@ namespace TextAdventureCS
     {
         protected string name;
         protected bool hasEnemy;
+        protected bool hasBossEnemy;
+        protected bool hasInn;
         protected Dictionary<string, Objects> items;
 
         public Location(string name)
         {
             this.name = name;
             hasEnemy = false;
+            hasBossEnemy = false;
+            hasInn = false;
             items = new Dictionary<string, Objects>();
         }
 
@@ -28,6 +32,16 @@ namespace TextAdventureCS
         public virtual bool HasEnemy()
         {
             return hasEnemy;
+        }
+
+        public virtual bool HasBossEnemy()
+        {
+            return hasBossEnemy;
+        }
+
+        public virtual bool HasInn()
+        {
+            return hasInn;
         }
 
         public virtual bool CheckForItems()

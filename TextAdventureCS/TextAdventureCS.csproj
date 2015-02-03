@@ -45,10 +45,24 @@
   <ItemGroup>
     <Compile Include="Actor.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="Locations\Castle_Locations\Castle.cs" />
+    <Compile Include="Locations\Castle_Locations\CastleArmory.cs" />
     <Compile Include="Locations\Church.cs" />
     <Compile Include="Locations\Cliff.cs" />
     <Compile Include="Locations\Forest.cs" />
+    <Compile Include="Locations\Lake.cs" />
+    <Compile Include="Locations\Ravine.cs" />
+    <Compile Include="Locations\Road.cs" />
     <Compile Include="Locations\Swamp.cs" />
+    <Compile Include="Locations\Tomb_Locations\Tomb.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombHall.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombHall1.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombHall2.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombRoom.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombRoom1.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombRoom2.cs" />
+    <Compile Include="Locations\Tomb_Locations\TombTreasure.cs" />
+    <Compile Include="Locations\Town.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Items\Diamond.cs" />

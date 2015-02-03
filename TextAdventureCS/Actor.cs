@@ -34,5 +34,10 @@ namespace TextAdventureCS
         {
             return health;
         }
+
+        public int SetHealth()
+        {
+           return health = maxHealth;           
+        }
     }
 }

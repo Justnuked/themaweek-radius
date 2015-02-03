@@ -5,17 +5,16 @@ using System.Text;
 
 namespace TextAdventureCS
 {
-    class Town : Location
+    class Castle : Location
     {
-        public Town(string name)
+        public Castle(string name)
             : base(name)
         {
-            hasInn = true;
+            hasBossEnemy = true;
         }
-
         public override void Description()
         {
-            Console.WriteLine("You are standing in a village");
+            Console.WriteLine("You are standing in front of a castle.");
         }
     }
 }
