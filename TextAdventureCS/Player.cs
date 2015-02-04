@@ -15,6 +15,13 @@ namespace TextAdventureCS
             inventory = new Dictionary<string, Objects>();
         }
 
+        public void ShowStats(Player player)
+        {
+            Console.WriteLine("Your Health = {0}/{1}", player.health, player.maxHealth);
+            Console.WriteLine("Your Strenght = {0}", player.str);
+            Console.WriteLine("Your Thoughness = {0}", player.though);
+        }
+
         public void DropItem(string itemName)
         {
             if (HasObject(itemName))

@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Town(string name)
             : base(name)
         {
+            Armour_Iron iron = new Armour_Iron("Frits", true);
+            items.Add(iron.GetName(), iron);
             hasInn = true;
         }
 

@@ -10,12 +10,16 @@ namespace TextAdventureCS
         protected string name;
         protected int maxHealth;
         protected int health;
+        protected int str;
+        protected int though;
         
         public Actor( string name, int maxHealth )
         {
             this.name = name;
             this.maxHealth = maxHealth;
             this.health = maxHealth;
+            this.str = 1;
+            this.though = 1;
         }
 
         public abstract void TakeHit(int damage);         

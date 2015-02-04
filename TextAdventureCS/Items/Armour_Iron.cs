@@ -10,6 +10,8 @@ namespace TextAdventureCS
         public Armour_Iron(string name, bool acquirable)
             : base(name, acquirable)
         {
+            name = "Iron platebody";
+            acquirable = true;
         }
 
         override protected void Description()

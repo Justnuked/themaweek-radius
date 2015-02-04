@@ -37,6 +37,7 @@ namespace TextAdventureCS
         const string ACTION_BOSS = "Boss fight";
         const string ACTION_INN = "Go to the inn";
         const string ACTION_INV = "Show inventory";
+        const string ACTION_STATS = "Show stats";
 
         static void Main(string[] args)
         {
@@ -167,7 +168,8 @@ namespace TextAdventureCS
 
             // Refactored by Michiel and Alex
             do
-            {                
+            {
+                Console.Clear();
                 map.GetLocation().Description();
                 choice = ShowMenu(map, ref menuItems);
 
@@ -180,12 +182,21 @@ namespace TextAdventureCS
 
                     switch ( menuItems[choice] )
                     {
+                        case ACTION_STATS:
+                            player.ShowStats(player);
+                            Console.ReadKey();
+                        break;
+
                         case ACTION_INV:
-                            ShowInv(ref player);
+                        
+                            player.ShowInventory();
+                            Console.ReadKey();
                         break;
 
                         case ACTION_SEARCH:
                             // Add code to perform an item pickup
+                        
+                        Console.ReadKey();
                         break;
 
                         case ACTION_FIGHT:
@@ -193,8 +204,7 @@ namespace TextAdventureCS
                         break;
 
                         case ACTION_RUN:
-                            // Add code for running here
-                            
+                            // Add code for running here                            
                         break;
 
                         case ACTION_BOSS:
@@ -202,9 +212,9 @@ namespace TextAdventureCS
                         break;
 
                         case ACTION_INN:
-                            //add inn code here
                         player.SetHealth();
-                        Console.WriteLine("You have been healed!");                    
+                        Console.WriteLine("You have been healed!");
+                        Console.ReadKey();
                         break;
                     }
                     
@@ -249,6 +259,7 @@ namespace TextAdventureCS
             {
                 menu.Add(ACTION_INN);
             }
+            menu.Add(ACTION_STATS);
             menu.Add(ACTION_INV);
             menu.Add( ACTION_QUIT );
 
@@ -286,11 +297,6 @@ namespace TextAdventureCS
             Console.WriteLine("Thank you for playing and have a nice day!");
             Console.WriteLine("Press a key to exit...");
             Console.ReadKey();
-        }
-
-        static void ShowInv(ref Player player)
-        {
-            player.ShowInventory();
         }
     }
 }
